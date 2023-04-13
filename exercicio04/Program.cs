@@ -8,6 +8,8 @@ class Exercicio
         while (true)
         {
         erro:;
+            Console.Clear();
+
             game.Grade();
             Console.WriteLine("Jogador 1");
             Console.WriteLine("Digite a coluna:");
@@ -15,13 +17,12 @@ class Exercicio
             Console.WriteLine("Digite a linha:");
             int b = Convert.ToInt32(Console.ReadLine());
 
-            if (game.SetJogada1(b, a))
-                /*if (game.SetJogada1(b, a))
+                if (!game.SetJogada1(b, a))
                 {
                     Console.WriteLine("Jogada Inválida.");
                     Console.ReadKey();
                     goto erro;
-                }*/
+                }
             
             if (game.Verificar())
             {
@@ -55,13 +56,12 @@ class Exercicio
             int c = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Digite a linha:");
             int d = Convert.ToInt32(Console.ReadLine());
-            if (game.SetJogada2(c, d)) ;
-               /* if (!game.SetJogada2(c, d))
+               if (!game.SetJogada2(c, d))
                 {
                     Console.WriteLine("Jogada Inválida.");
                     Console.ReadKey();
                     goto erro2;
-                }*/
+                }
         }
         if (game.Verificar())
         {
